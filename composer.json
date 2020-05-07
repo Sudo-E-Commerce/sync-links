@@ -1,0 +1,27 @@
+{
+    "name": "sudo/sync-links",
+    "description": "Sync Link Sudo package",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Nguyen Viet Hieu",
+            "email": "hieunvph04479@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Sudo\\SyncLink\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sudo\\SyncLink\\Providers\\SyncLinkServiceProvider"
+            ],
+            "aliases": {}
+        }
+    }
+}
