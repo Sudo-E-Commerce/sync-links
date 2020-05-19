@@ -85,9 +85,21 @@ class SyncLinkServiceProvider extends ServiceProvider
     public function publish()
     {
         if ($this->app->runningInConsole()) {
-            $this->publishes([
-                
-            ], 'sudo/sync-links');
+            $assets = [
+                //
+            ];
+            $config = [
+                //
+            ];
+            $all = array_merge($assets, $config);
+            // Chạy riêng
+            $this->publishes($all, 'sudo/sync_links');
+            $this->publishes($assets, 'sudo/sync_links/assets');
+            $this->publishes($config, 'sudo/sync_links/config');
+            // Khởi chạy chung theo core
+            $this->publishes($all, 'sudo/core');
+            $this->publishes($assets, 'sudo/core/assets');
+            $this->publishes($config, 'sudo/core/config');
         }
     }
 
