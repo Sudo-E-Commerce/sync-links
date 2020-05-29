@@ -30,8 +30,8 @@ class SyncLinkController extends AdminController
         $listdata->search('new', 'Link mới', 'string');
         $listdata->search('status', 'Trạng thái', 'array', config('app.status'));
         // Build các button hành động
-        $listdata->btnAction('status', 1, __('Table::table.active'), 'primary', 'fas fa-edit');
-        $listdata->btnAction('status', 0, __('Table::table.no_active'), 'warning', 'fas fa-edit');
+        $listdata->btnAction('status', 1, __('Table::table.active'), 'success', 'fas fa-edit');
+        $listdata->btnAction('status', 0, __('Table::table.no_active'), 'info', 'fas fa-window-close');
         $listdata->btnAction('delete', -1, __('Table::table.trash'), 'danger', 'fas fa-trash');
         // Build bảng
         $listdata->add('old', 'Link cũ', 1);
