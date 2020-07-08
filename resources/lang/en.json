@@ -3,6 +3,12 @@
 
 	"Link cũ": "Old Link",
 	"Link mới": "New Link",
+	"Điều hướng": "Redirect",
+
+	"Sử dụng file Excel (xlsx, xls) để Import dữ liệu Link đồng bộ": "Use file Excel (xlsx, xls) to Import data",
+	"Cột 1 (Cột A): Điền link cũ": "Col 1 (Col A): Old Link",
+	"Cột 2 (Cột B): Điền link mới": "Col 2 (Col B): New Link",
+	"Cột 3 (Cột C): Điền điều hướng (301 | 302) (Không nhập mặc định là 301)": "Col 3 (Col C): Redirect (301 | 302) (Default 301)",
 
 	"x": "x"
 }
