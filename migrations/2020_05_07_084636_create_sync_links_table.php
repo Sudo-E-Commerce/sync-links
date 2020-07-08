@@ -17,7 +17,6 @@ class CreateSyncLinksTable extends Migration
             $table->bigIncrements('id');
             $table->text('old')->nullable();
             $table->text('new')->nullable();
-            $table->text('redirect')->nullable();
             $table->tinyInteger('status')->default(1);
         });
     }
