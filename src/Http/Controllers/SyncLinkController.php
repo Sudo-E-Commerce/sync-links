@@ -54,7 +54,7 @@ class SyncLinkController extends AdminController
             'SyncLink::import_file' => [],
         ];
 
-        return $listdata->render(compact('include_view_bottom'));
+        return $listdata->render(compact('include_view_bottom', 'redirect'));
     }
 
     /**
