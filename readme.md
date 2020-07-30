@@ -39,3 +39,13 @@ Mặc định package sẽ tạo ra giao diện quản lý cho toàn bộ Link �
 - Vị trí cấu hình được đặt tại `config/SudoModule.php`
 - Để có thể phân quyền, chúng ta có thể đặt đoạn cấu hình trên tại `config('SudoModule.modules')`
  
+### Sử dụng ###
+
+Tính năng này dùng điều hướng link cũ sang link mới với các dạng điều hướng 301 và 302 phục vụ cho SEO. 
+
+Nhúng đoạn mã dưới đây tại hàm `render` của `app/Exceptions/Handler.php` để thực hiện Check và điều hướng
+
+	$check_syncs = \DB::table('sync_links')->where('old', $_SERVER['REQUEST_URI'])->where('status', 1)->first();
+    if(!empty($check_syncs) && !empty($check_syncs->new)){
+        return redirect($check_syncs->new ?? '/', $check_syncs->redirect);
+    }
