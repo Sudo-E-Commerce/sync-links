@@ -39,9 +39,9 @@ class SyncLinkController extends AdminController
         $listdata->searchBtn('Export', route('admin.ajax.sync_links.export'), 'primary', 'fas fa-file-excel');
         $listdata->searchBtn('Import', '#import-sync-link', 'info', 'fas fa-file-excel');
         // Build các button hành động
-        $listdata->btnAction('status', 1, __('Table::table.active'), 'success', 'fas fa-edit');
-        $listdata->btnAction('status', 0, __('Table::table.no_active'), 'info', 'fas fa-window-close');
-        $listdata->btnAction('delete', -1, __('Table::table.trash'), 'danger', 'fas fa-trash');
+        $listdata->btnAction('status', 1, __('Translate::table.active'), 'success', 'fas fa-edit');
+        $listdata->btnAction('status', 0, __('Translate::table.no_active'), 'info', 'fas fa-window-close');
+        $listdata->btnAction('delete', -1, __('Translate::table.trash'), 'danger', 'fas fa-trash');
         // Build bảng
         $listdata->add('old', 'Link cũ', 1);
         $listdata->add('new', 'Link mới', 1);

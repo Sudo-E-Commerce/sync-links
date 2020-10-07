@@ -20,7 +20,7 @@
 				</div>
 				<div class="modal-footer justify-content-between">
 					<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">@lang('Đóng')</button>
-					<button type="submit" class="btn btn-primary btn-sm" data-import_sync_links>@lang('Table::table.create')</button>
+					<button type="submit" class="btn btn-primary btn-sm" data-import_sync_links>@lang('Translate::table.create')</button>
 				</div>
 			</div>
 		</form>
@@ -68,7 +68,7 @@
 			        },
 			        error: function (error) {
 			            activeProgress(99, 'close');
-			            alertText('@lang('Core::admin.ajax_fail')', 'error')
+			            alertText('@lang('Translate::admin.ajax_fail')', 'error')
 			        }
 			    })
 			}

@@ -4,7 +4,7 @@
 		<form action="" method="POST">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title">@lang('Table::table.create') @lang($module_name)</h4>
+					<h4 class="modal-title">@lang('Translate::table.create') @lang($module_name)</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">×</span>
 				</button>
@@ -35,7 +35,7 @@
 				</div>
 				<div class="modal-footer justify-content-between">
 					<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">@lang('Đóng')</button>
-					<button type="submit" class="btn btn-primary btn-sm" data-add_sync_links>@lang('Table::table.create')</button>
+					<button type="submit" class="btn btn-primary btn-sm" data-add_sync_links>@lang('Translate::table.create')</button>
 				</div>
 			</div>
 		</form>
