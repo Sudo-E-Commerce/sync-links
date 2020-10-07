@@ -95,13 +95,13 @@ class SyncLinkController extends AdminController
         if ($requests->ajax()) {
             return [
                 'status' => 1,
-                'message' => __('Core::admin.create_success')
+                'message' => __('Translate::admin.create_success')
             ];
         } else {
             // Điều hướng
             return redirect(route('admin.'.$this->table_name.'.'.$redirect, $id))->with([
                 'type' => 'success',
-                'message' => __('Core::admin.create_success')
+                'message' => __('Translate::admin.create_success')
             ]);
         }
     }
@@ -159,7 +159,7 @@ class SyncLinkController extends AdminController
         // Điều hướng
         return redirect(route('admin.'.$this->table_name.'.'.$redirect, $id))->with([
             'type' => 'success',
-            'message' => __('Core::admin.update_success')
+            'message' => __('Translate::admin.update_success')
         ]);
     }
 
@@ -190,7 +190,7 @@ class SyncLinkController extends AdminController
                     \Excel::import(new \Sudo\SyncLink\Imports\SyncLinkImport, $file);
                     return [
                         'status' => 1,
-                        'message' => __('Core::admin.create_success')
+                        'message' => __('Translate::admin.create_success')
                     ];
                 } catch (\Exception $e) {
                     \Log::error($e);
@@ -208,7 +208,7 @@ class SyncLinkController extends AdminController
         } else {
             return [
                 'status' => 2,
-                'message' => __('Core::admin.ajax_error_edit')
+                'message' => __('Translate::admin.ajax_error_edit')
             ];
         }
     }
